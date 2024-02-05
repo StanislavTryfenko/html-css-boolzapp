@@ -22,14 +22,26 @@
 /* #region common */
 
 header{
+    background-color: var(--bool-gray);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 10vh;
 }
 
 ul{
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+img{
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    width: 8vh;
 }
 
 /* #endregion */
@@ -74,8 +86,6 @@ ul{
 
 /* #region contacts */
 
-
-
 /* #endregion */
 
 /* #endregion */
@@ -88,7 +98,12 @@ ul{
 
 /* #region header */
 
-
+.chat-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
 
 /* #endregion */
 
@@ -148,7 +163,7 @@ ul{
     &> input{
         width: 75%;
         padding: 1.25rem  0;
-        border-radius: 16px;
+        border-radius: 8px;
     }
 }
 
