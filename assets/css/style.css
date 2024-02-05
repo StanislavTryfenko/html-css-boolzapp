@@ -57,6 +57,11 @@ img{
     background-color: aqua;
 }
 
+.p-relative{
+    position: relative;
+
+}
+
 /* #endregion */
 
 /* #region left */
@@ -97,6 +102,27 @@ img{
 /* #endregion */
 
 /* #region contacts */
+
+.contacts{
+    overflow-x: scroll;
+    height: 61vh;
+    background-color: var(--bool-bg-input-msg);
+}
+
+.contact-card{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.contact-time{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+}
+
 
 /* #endregion */
 
