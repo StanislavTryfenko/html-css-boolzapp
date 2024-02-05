@@ -8,6 +8,7 @@
     --bool-bg-body-bottom: rgba(177, 177, 177, 1);
     --bool-bg-output-msg: rgba(213, 249, 186, 1);
     --bool-bg-input-msg: rgba(255, 255, 255, 1);
+    --bool-bg-banner: rgba(142, 218, 252, 1);
 }
 
 *,
@@ -16,13 +17,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black ;
+    /* border: 1px solid black ; */
 }
 
 /* #region common */
 
 header{
-    background-color: var(--bool-gray);
+    background-color: var(--bool-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +46,9 @@ img{
     margin-left: 1rem;
 }
 
+i{
+    color: var(--bool-bg-body-bottom);
+}
 /* #endregion */
 
 /* #region utility */
@@ -54,7 +58,6 @@ img{
     display: flex;
     width: 80%;
     height: 90vh;
-    background-color: aqua;
 }
 
 .p-relative{
@@ -78,7 +81,7 @@ img{
 
 .banner{
     height: 12vh;
-    background-color: blueviolet;
+    background-color: var(--bool-bg-banner);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -87,7 +90,12 @@ img{
     padding: 1rem;
     border-radius: 50%;
     margin-left: 1rem;
-    background-color: white;
+    background-color: var(--bool-bg-input-msg);
+    color: var(--bool-bg-banner);
+    padding-top: 1.7rem;
+    }
+    & a{
+        color: var(--bool-black);
     }
 }
 
@@ -97,6 +105,23 @@ img{
 
 .research{
     height: 7vh;
+    background-color: var(--bool-white);
+    padding: 0.5rem;
+}
+
+.research-bar{
+    background-color: var(--bool-bg-input-msg);
+    display: flex;
+    gap: 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--bool-gray);
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    
+    &> input{
+        width: 75%;
+        border: none;
+    }
 }
 
 /* #endregion */
@@ -115,6 +140,7 @@ img{
     gap: 1rem;
     padding: 1rem 0;
     position: relative;
+    border-bottom: 1px solid var(--bool-white);
 }
 
 .contact-time{
@@ -196,11 +222,15 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--bool-gray);
+    background-color: var(--bool-white);
     &> input{
         width: 75%;
         padding: 1.25rem  0;
         border-radius: 8px;
+        border: none;
+    }
+    & i{
+        color: var(--bool-black);
     }
 }
 
