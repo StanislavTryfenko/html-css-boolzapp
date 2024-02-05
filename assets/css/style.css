@@ -25,6 +25,11 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 10vh;
+}
+
+ul{
+    list-style: none;
 }
 
 /* #endregion */
@@ -53,13 +58,23 @@ header{
 
 /* #region banner */
 
+.banner{
+    height: 12vh;
+}
+
 /* #endregion */
 
 /* #region research */
 
+.research{
+    height: 7vh;
+}
+
 /* #endregion */
 
 /* #region contacts */
+
+
 
 /* #endregion */
 
@@ -77,18 +92,27 @@ header{
 
 /* #region chat-log */
 
+.chat-log{
+    height: 70vh;
+}
+
 /* #endregion */
 
 /* #region chat-input */
 
-/* #endregion */
+.chat-input{
+    height: 10vh;
+    align-self: flex-end;
+}
 
 /* #endregion */
 
-@media screen and (min-width: px) {
+/* #endregion */
+
+@media screen and (max-width: 991px) {
     
 }
 
-@media screen and (min-width: px) {
+@media screen and (max-width: 540px) {
     
 }
