@@ -1,0 +1,69 @@
+:root{
+    --bool-white: rgba(234, 234, 234, 1);
+    --bool-black: black;
+    --bool-gray: rgba(220, 219, 210, 1);
+    --bool-bg-body-top: rgba(0, 150, 136, 1);
+    --bool-bg-body-bottom: rgba(177, 177, 177, 1);
+    --bool-bg-output-msg: rgba(213, 249, 186, 1);
+    --bool-bg-input-msg: rgba(255, 255, 255, 1);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #region common */
+
+/* #endregion */
+
+/* #region utility */
+
+/* #endregion */
+
+/* #region left */
+
+/* #region header */
+
+/* #endregion */
+
+/* #region banner */
+
+/* #endregion */
+
+/* #region research */
+
+/* #endregion */
+
+/* #region contacts */
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region right */
+
+/* #region header */
+
+/* #endregion */
+
+/* #region chat-log */
+
+/* #endregion */
+
+/* #region chat-input */
+
+/* #endregion */
+
+/* #endregion */
+
+@media screen and (min-width: px) {
+    
+}
+
+@media screen and (min-width: px) {
+    
+}
