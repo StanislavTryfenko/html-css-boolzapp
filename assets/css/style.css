@@ -1,3 +1,5 @@
+
+
 :root{
     --bool-white: rgba(234, 234, 234, 1);
     --bool-black: black;
@@ -14,17 +16,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid black ;
 }
 
 /* #region common */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /* #endregion */
 
 /* #region utility */
 
+.container{
+    margin: 5vh auto;
+    display: flex;
+    width: 80%;
+    height: 90vh;
+    background-color: aqua;
+}
+
 /* #endregion */
 
 /* #region left */
+
+.left{
+    flex-basis: 35%;
+}
 
 /* #region header */
 
@@ -45,6 +66,10 @@
 /* #endregion */
 
 /* #region right */
+
+.right{
+    flex-basis: 65%;
+}
 
 /* #region header */
 
