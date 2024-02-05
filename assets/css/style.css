@@ -73,6 +73,17 @@ img{
 
 .banner{
     height: 12vh;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &> i{
+    aspect-ratio: 1;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: white;
+    }
 }
 
 /* #endregion */
