@@ -94,6 +94,42 @@ ul{
 
 .chat-log{
     height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem;
+    background-image: url(../img/chat-bg.jpg);
+    overflow-x: scroll;
+}
+
+.output{
+    background-color: var(--bool-bg-output-msg);
+    align-self: flex-end;
+    max-width: 66%;
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    border-radius: 16px;
+    position: relative;
+}
+
+.input{
+    background-color: var(--bool-bg-input-msg);
+    align-self: flex-start;
+    max-width: 66%;
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    border-radius: 16px;
+    position: relative;
+}
+
+.msg-info{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.msg-time{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
 }
 
 /* #endregion */
