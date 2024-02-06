@@ -27,7 +27,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 5rem;
 }
 
 ul{
@@ -42,7 +42,7 @@ img{
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1;
-    width: 8vh;
+    width: 4rem;
     margin-left: 1rem;
 }
 
@@ -70,7 +70,7 @@ i{
 /* #region left */
 
 .left{
-    flex-basis: 35%;
+    width: 35%;
 }
 
 /* #region header */
@@ -80,7 +80,7 @@ i{
 /* #region banner */
 
 .banner{
-    height: 12vh;
+    height: 6rem;
     background-color: var(--bool-bg-banner);
     display: flex;
     align-items: center;
@@ -103,13 +103,13 @@ i{
 
 /* #region research */
 
-.research{
-    height: 7vh;
+.search{
+    height: 3.5rem;
     background-color: var(--bool-white);
     padding: 0.5rem;
 }
 
-.research-bar{
+.search-bar{
     background-color: var(--bool-bg-input-msg);
     display: flex;
     gap: 1rem;
@@ -129,8 +129,8 @@ i{
 /* #region contacts */
 
 .contacts{
-    overflow-x: scroll;
-    height: 61vh;
+    overflow-y: scroll;
+    height: calc(100% - 14.5rem);
     background-color: var(--bool-bg-input-msg);
 }
 
@@ -157,7 +157,7 @@ i{
 /* #region right */
 
 .right{
-    flex-basis: 65%;
+    width: 65%;
 }
 
 /* #region header */
@@ -173,13 +173,13 @@ i{
 /* #region chat-log */
 
 .chat-log{
-    height: 70vh;
+    height: calc(100% - 10rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1.75rem 1.5rem;
     background-image: url(../img/chat-bg.jpg);
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 .output{
@@ -217,7 +217,7 @@ i{
 /* #region chat-input */
 
 .chat-input{
-    height: 10vh;
+    height: 5rem;
     align-self: flex-end;
     display: flex;
     align-items: center;
@@ -239,9 +239,60 @@ i{
 /* #endregion */
 
 @media screen and (max-width: 991px) {
+
+    .container{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
     
+    .d-none{
+        display: none;
+    }
+
+    .left{
+        width: 6rem;
+        &> header{
+            width: 6rem;
+        }
+        &> .contacts{
+            height: calc(100% - 6rem);
+        }
+    }
+    
+    .contacts{
+        width: 6rem;
+        height: calc(100% - 5rem);
+    }
+
+    .right{
+        width: calc(100% - 6rem);
+    }
+
+
 }
 
 @media screen and (max-width: 540px) {
     
+    .d-none-2x{
+        display: none;
+    }
+
+    .right{
+        flex-basis: 100%;
+        &> header{
+            width: 100%;
+        }
+    }
+
+    .output, .input{
+        max-width: 80%;
+    }
+
+    .chat-input{
+        width: 100%;
+        &> input{
+            width: 90%;
+        }
+    }
 }
