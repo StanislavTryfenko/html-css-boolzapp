@@ -22,12 +22,18 @@
 
 /* #region common */
 
+body{
+    background-image: linear-gradient(var(--bool-bg-body-top) calc(5vh + 6rem), calc(5vh + 6rem), var(--bool-bg-body-bottom) 80%);
+}
+
 header{
+    position: fixed;
     background-color: var(--bool-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 5rem;
+    z-index: 10000;
 }
 
 ul{
@@ -42,8 +48,8 @@ img{
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1;
-    width: 8vh;
-    margin-left: 1rem;
+    width: 4rem;
+    margin: 0 1rem;
 }
 
 i{
@@ -60,17 +66,17 @@ i{
     height: 90vh;
 }
 
-.p-relative{
-    position: relative;
-
-}
-
 /* #endregion */
 
 /* #region left */
 
 .left{
     flex-basis: 35%;
+    position: relative;
+    &> header{
+        width: 28%;
+        border-right: 1px solid var(--bool-bg-body-bottom);
+    }
 }
 
 /* #region header */
@@ -80,7 +86,10 @@ i{
 /* #region banner */
 
 .banner{
-    height: 12vh;
+    position: fixed;
+    top: calc(5rem + 5vh);
+    width: 28%;
+    height: 6rem;
     background-color: var(--bool-bg-banner);
     display: flex;
     align-items: center;
@@ -104,7 +113,10 @@ i{
 /* #region research */
 
 .research{
-    height: 7vh;
+    position: fixed;
+    top: calc(11rem + 5vh);
+    width: 28%;
+    height: 3.5rem;
     background-color: var(--bool-white);
     padding: 0.5rem;
 }
@@ -129,8 +141,11 @@ i{
 /* #region contacts */
 
 .contacts{
+    position: fixed;
+    top: calc(14.5rem + 5vh);
+    width: 28%;
     overflow-x: scroll;
-    height: 61vh;
+    height: calc(100% - 14.5rem - 10vh);
     background-color: var(--bool-bg-input-msg);
 }
 
@@ -149,7 +164,6 @@ i{
     right: 1rem;
 }
 
-
 /* #endregion */
 
 /* #endregion */
@@ -158,6 +172,9 @@ i{
 
 .right{
     flex-basis: 65%;
+    &> header{
+        width: 51.9%;
+    }
 }
 
 /* #region header */
@@ -173,11 +190,11 @@ i{
 /* #region chat-log */
 
 .chat-log{
-    height: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.75rem 1.5rem;
+    padding: 7rem 1.5rem;
     background-image: url(../img/chat-bg.jpg);
     overflow-x: scroll;
 }
@@ -186,7 +203,7 @@ i{
     background-color: var(--bool-bg-output-msg);
     align-self: flex-end;
     max-width: 66%;
-    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    padding: 0.75rem 1.3rem 0.75rem 0.75rem;
     border-radius: 16px;
     position: relative;
 }
@@ -195,21 +212,21 @@ i{
     background-color: var(--bool-bg-input-msg);
     align-self: flex-start;
     max-width: 66%;
-    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    padding: 0.75rem 1.3rem 0.75rem 0.75rem;
     border-radius: 16px;
     position: relative;
 }
 
 .msg-info{
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 7%;
+    right: 3%;
 }
 
 .msg-time{
     position: absolute;
-    bottom: 2%;
-    right: 1%;
+    bottom: 4%;
+    right: 2%;
 }
 
 /* #endregion */
@@ -217,8 +234,11 @@ i{
 /* #region chat-input */
 
 .chat-input{
-    height: 10vh;
-    align-self: flex-end;
+    position: fixed;
+    bottom: 5%;
+    width: 51.9%;
+    z-index: 10000;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -239,9 +259,66 @@ i{
 /* #endregion */
 
 @media screen and (max-width: 991px) {
+
+    .container{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
     
+    .d-none{
+        display: none;
+    }
+
+    .left{
+        flex-basis: 6rem;
+        &> header{
+            width: 6rem;
+        }
+    }
+    
+    .contacts{
+        top: 5rem;
+        width: 6rem;
+        height: calc(100% - 5rem);
+    }
+
+    .right{
+        flex-basis: calc(100% - 6rem);
+        &> header{
+            width: calc(100% - 6rem);
+        }
+    }
+
+    .chat-input{
+        width: calc(100% - 6rem);
+        bottom: 0%;
+    }
+
 }
 
 @media screen and (max-width: 540px) {
+
+    .d-none-2x{
+        display: none;
+    }
+
+    .right{
+        flex-basis: 100%;
+        &> header{
+            width: 100%;
+        }
+    }
+
+    .output, .input{
+        max-width: 80%;
+    }
+
+    .chat-input{
+        width: 100%;
+        &> input{
+            width: 90%;
+        }
+    }
     
 }
