@@ -22,6 +22,13 @@
 
 /* #region common */
 
+body{
+    background-image: linear-gradient(var(--bool-bg-body-top) calc(5vh + 6rem), calc(5vh + 6rem), var(--bool-bg-body-bottom) 80%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
 header{
     background-color: var(--bool-white);
     display: flex;
@@ -48,6 +55,11 @@ img{
 
 i{
     color: var(--bool-bg-body-bottom);
+}
+
+h5{
+    opacity: 0.5;
+    margin-top: 0.3rem;
 }
 /* #endregion */
 
@@ -186,7 +198,7 @@ i{
     background-color: var(--bool-bg-output-msg);
     align-self: flex-end;
     max-width: 66%;
-    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
     border-radius: 16px;
     position: relative;
 }
@@ -195,21 +207,23 @@ i{
     background-color: var(--bool-bg-input-msg);
     align-self: flex-start;
     max-width: 66%;
-    padding: 0.75rem 1rem 0.75rem 0.75rem;
+    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
     border-radius: 16px;
     position: relative;
 }
 
 .msg-info{
     position: absolute;
-    top: 2%;
+    top: 4%;
     right: 2%;
+    opacity: 0.5;
 }
 
 .msg-time{
     position: absolute;
-    bottom: 2%;
-    right: 1%;
+    bottom: 3%;
+    right: 2%;
+    opacity: 0.5;
 }
 
 /* #endregion */
@@ -273,7 +287,7 @@ i{
 }
 
 @media screen and (max-width: 540px) {
-    
+
     .d-none-2x{
         display: none;
     }
